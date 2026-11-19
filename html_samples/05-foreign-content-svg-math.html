@@ -1,0 +1,18 @@
+<!--
+  Group: Foreign content (svg, math) (4 samples)
+  This whole file is ONE valid input: paste it into the page to convert all the samples at once.
+  To try a single sample, copy the lines between one "=====" line and the next.
+-->
+
+<!-- ===== svg with self-closing children ===== -->
+<svg width=10 height=10><path d="M0 0"/><circle r=1 /><g><rect/></g></svg>
+
+<!-- ===== svg title and style are ordinary elements ===== -->
+<svg><title>A <b>bold</b> title</title><style>x</style></svg>
+
+<!-- ===== Raw text again after the svg ===== -->
+<svg></svg><title><b>raw</b></title>
+
+<!-- ===== MathML ===== -->
+<math><mi>x</mi><mo/><mn>2</mn></math>
+

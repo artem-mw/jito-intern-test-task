@@ -1,0 +1,18 @@
+{
+  "name": "jito-intern-test-task",
+  "version": "1.0.0",
+  "description": "Converts HTML into a JSON tree without a DOM parser: a single-pass tokenizer plus an explicit stack.",
+  "main": "html2json.js",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artem-mw/jito-intern-test-task.git"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

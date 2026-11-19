@@ -1,0 +1,15 @@
+<!--
+  Group: maxDepth option (3 samples)
+  INDEPENDENT cases: paste ONE sample at a time (the lines between one "=====" line and the next).
+  Each case needs its own value in the Max depth field, which its label gives.
+-->
+
+<!-- ===== maxDepth 2: the rest becomes text [Max depth: 2] ===== -->
+<div><section><p><span>x</span></p></section></div>
+
+<!-- ===== maxDepth 1: text before the limit is merged [Max depth: 1] ===== -->
+<div>abc<span>x</span></div>
+
+<!-- ===== maxDepth 0: void elements still pass [Max depth: 0] ===== -->
+<br>text<img><p>a</p>
+

@@ -1,0 +1,39 @@
+<!--
+  Group: Tree repair (11 samples)
+  INDEPENDENT cases: paste ONE sample at a time (the lines between one "=====" line and the next).
+  Some of these samples deliberately leave elements open, so they would swallow the samples after them.
+-->
+
+<!-- ===== Missing closing tags ===== -->
+<div><p>one<span>two
+
+<!-- ===== Mismatched closing tags ===== -->
+<div><span></div>after</span>
+
+<!-- ===== Unmatched closing tags ===== -->
+</div>text</span><b>x</b></b>
+
+<!-- ===== Unclosed list items ===== -->
+<ul><li>a<li>b<li>c</ul>
+
+<!-- ===== Nested lists keep their nesting ===== -->
+<ul><li>a<ul><li>b</li></ul><li>c</ul>
+
+<!-- ===== Paragraphs closed by other blocks ===== -->
+<p>one<p>two<div>block</div><p>three
+
+<!-- ===== Table rows and cells ===== -->
+<table><tr><th>h1<th>h2<tr><td>a<td>b<tr><td>c</table>
+
+<!-- ===== Definition list ===== -->
+<dl><dt>t1<dd>d1<dt>t2<dd>d2</dl>
+
+<!-- ===== Select options ===== -->
+<select><option>a<option>b</select>
+
+<!-- ===== Stray </p> and </br> ===== -->
+before</p>middle</br>after
+
+<!-- ===== Known limitation: li inside an inline element ===== -->
+<li>a<b>bold<li>b
+

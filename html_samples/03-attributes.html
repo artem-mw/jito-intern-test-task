@@ -1,0 +1,33 @@
+<!--
+  Group: Attributes (9 samples)
+  This whole file is ONE valid input: paste it into the page to convert all the samples at once.
+  To try a single sample, copy the lines between one "=====" line and the next.
+-->
+
+<!-- ===== Quote styles ===== -->
+<a href="double" title='single' id=unquoted>link</a>
+
+<!-- ===== Valueless attributes ===== -->
+<input type=checkbox checked disabled>
+
+<!-- ===== Duplicates: the first one wins ===== -->
+<div id=first ID=second class=a class=b>x</div>
+
+<!-- ===== Spaces around = ===== -->
+<a href = "x" title ='y' id= z>t</a>
+
+<!-- ===== Quoted values containing > and quotes ===== -->
+<a title=">" data-x='say "hi"' data-y="it's">t</a>
+
+<!-- ===== Attributes with no space between them ===== -->
+<a a="1"b="2"c=3>t</a>
+
+<!-- ===== Garbage inside a tag is skipped ===== -->
+<div "x" =foo ='bar' id=1 / class=a>t</div>
+
+<!-- ===== __proto__ and constructor as names ===== -->
+<div __proto__="x" constructor="y" tostring=z>t</div>
+
+<!-- ===== Slash inside an unquoted value ===== -->
+<a href=foo/>link</a>
+

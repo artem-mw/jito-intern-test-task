@@ -1,0 +1,24 @@
+<!--
+  Group: Special constructs (6 samples)
+  This whole file is ONE valid input: paste it into the page to convert all the samples at once.
+  To try a single sample, copy the lines between one "=====" line and the next.
+-->
+
+<!-- ===== Comments ===== -->
+<!-- a comment --><p>x</p><!---->
+
+<!-- ===== Degenerate comments ===== -->
+<!--><!---><!----><p>x</p>
+
+<!-- ===== Comment ended by ‑‑!> ===== -->
+<!-- a --!> b -->
+
+<!-- ===== Markup inside a comment ===== -->
+<!-- <div>x</div> -->after
+
+<!-- ===== Doctype variants ===== -->
+<!DOCTYPE html><!doctype HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<!-- ===== CDATA, processing instructions, bogus (dropped) ===== -->
+a<![CDATA[ x > y ]]>b<?xml version="1.0"?>c<!foo>d
+

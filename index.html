@@ -1,69 +1,117 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML to JSON</title>
     <script src="html2json.js"></script>
+    <script src="samples.js"></script>
+    <script src="app.js"></script>
     <style>
-      h1 {
-        font-family: sans-serif
-      }
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+        h1 {
+            font-family: sans-serif
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-      .container {
-        display: flex;
-        width: 100%;
-        gap: 10px;
-      }
+        .toolbar {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
 
-      .field {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-      }
+        .toolbar select {
+            height: 40px;
+            min-width: 280px;
+            max-width: 100%;
+        }
 
-      textarea {
-        width: 100%;
-        height: calc(100vh - 170px);
-        max-width: 100%;
-        white-space: pre;
-      }
+        .toolbar input[type="number"] {
+            height: 34px;
+            width: 90px;
+        }
 
-      .buttons {
-        display: flex;
-        gap: 10px;
-        margin-top: 10px;
-      }
+        .container {
+            display: flex;
+            width: 100%;
+            gap: 10px;
+        }
 
-      button {
-        width: 150px;
-        height: 40px;
-        cursor: pointer;
-      }
+        .field {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+
+        textarea {
+            width: 100%;
+            height: calc(100vh - 260px);
+            min-height: 200px;
+            max-width: 100%;
+            white-space: pre;
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        button {
+            width: 150px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            cursor: default;
+        }
+
+        .toolbar .nav-button {
+            width: 90px;
+        }
+
+        .status {
+            font-family: sans-serif;
+            font-size: 14px;
+            color: #444;
+        }
     </style>
-  </head>
-  <body>
-    <h1>Jito's Software Developer Intern "html2json" Test Task</h1>
+</head>
+<body>
+<h1>Jito's Software Developer Intern "html2json" Test Task</h1>
 
-    <div class="container">
-      <div class="field">
+<div class="toolbar">
+    <label for="sample">Sample:</label>
+    <select id="sample"></select>
+    <button type="button" id="prev" class="nav-button">&larr; Prev</button>
+    <button type="button" id="next" class="nav-button">Next &rarr;</button>
+    <label for="maxDepth">Max depth:</label>
+    <input type="number" id="maxDepth" min="0" step="1" placeholder="no limit"
+           title="Optional. Elements nested deeper than this are kept as text. Empty means no limit." />
+</div>
+
+<div class="container">
+    <div class="field">
         <label for="html">Input for "html2json" conversion:</label>
-        <textarea id="html" placeholder="Enter your HTML"></textarea>
-      </div>
-      <div class="field">
+        <textarea id="html" spellcheck="false" placeholder="Enter your HTML"></textarea>
+    </div>
+    <div class="field">
         <label for="json">Results of "html2json" conversion:</label>
-        <textarea disabled id="json" placeholder="Here will be output from your html2json function"></textarea>
-      </div>
+        <textarea readonly id="json" spellcheck="false" placeholder="Here will be output from your html2json function"></textarea>
     </div>
-    <div class="buttons">
-      <button onclick="convertHtml2JsonAndSet()">Convert to JSON</button>
-      <button onclick="showExample1()">Input Example 1</button>
-      <button onclick="showExample2()">Input Example 2</button>
-    </div>
-  </body>
+</div>
+<div class="buttons">
+    <button onclick="convertHtml2JsonAndSet()">Convert to JSON</button>
+    <span id="status" class="status" role="status"></span>
+</div>
+</body>
 </html>
-

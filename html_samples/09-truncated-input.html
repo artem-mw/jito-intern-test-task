@@ -1,0 +1,30 @@
+<!--
+  Group: Truncated input (8 samples)
+  INDEPENDENT cases: paste ONE sample at a time (the lines between one "=====" line and the next).
+  Every one of these samples ends in the middle of a construct, so each must be the very end of its input: copy it without the line break after it.
+-->
+
+<!-- ===== Unfinished opening tag ===== -->
+<p>text</p><div class="a
+
+<!-- ===== Unfinished closing tag ===== -->
+<p>text</p
+
+<!-- ===== Unterminated comment ===== -->
+<p>x</p><!-- never closed
+
+<!-- ===== Unterminated doctype ===== -->
+<!DOCTYPE html
+
+<!-- ===== Unterminated script ===== -->
+<script>var a = 1; if (a < 2) {
+
+<!-- ===== Unterminated CDATA ===== -->
+text<![CDATA[ never closed
+
+<!-- ===== Lone < at the end ===== -->
+a < b <
+
+<!-- ===== Elements still open at the end ===== -->
+<div><section><p>deep
+

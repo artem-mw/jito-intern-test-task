@@ -1,0 +1,27 @@
+<!--
+  Group: Raw text (7 samples)
+  This whole file is ONE valid input: paste it into the page to convert all the samples at once.
+  To try a single sample, copy the lines between one "=====" line and the next.
+-->
+
+<!-- ===== script containing < and > ===== -->
+<script>if (a < b && c > d) { document.write("<p>hi</p>"); }</script>
+
+<!-- ===== style ===== -->
+<style>a > b { color: red; }</style>
+
+<!-- ===== title and textarea ===== -->
+<title>A <b>title</b></title><textarea><b>not bold</b></textarea>
+
+<!-- ===== Closing tag is case-insensitive ===== -->
+<script>x</SCRIPT>after
+
+<!-- ===== Fake closing tags inside a script ===== -->
+<script>a</scriptx>b</style>c</script>
+
+<!-- ===== Empty script ===== -->
+<script></script>
+
+<!-- ===== Self-closing script (the slash is ignored) ===== -->
+<script/>still raw</script>
+
